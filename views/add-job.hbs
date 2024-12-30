@@ -1,0 +1,197 @@
+<form class="needs-validation p-4" novalidate action="{{url}}" id="form" method="post">
+
+  <div class="row">
+    <div class="col-sm-6 box">
+      <h4 class="mb-3">Client details</h4>
+      <div class="row line">
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            name="firstName"
+            placeholder="First name"
+            value=""
+            required
+          />
+        </div>
+
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            name="lastName"
+            placeholder="Last name"
+            value=""
+            required
+          />
+        </div>
+
+      </div>
+      <div class="row line">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            name="phone"
+            placeholder="Phone"
+            value=""
+            required
+          />
+        </div></div>
+      <div class="row line">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            name="email"
+            placeholder="Email (optional)"
+            value=""
+          />
+        </div></div>
+    </div>
+
+    <div class="col-sm-6 box">
+      <h4 class="mb-3">Job type</h4>
+      <div class="row line">
+        <div class="col-sm-6">
+          <select class="form-select" name="jobType">
+            <option value="" disabled selected>Job type</option>
+            <option>Some job type</option>
+          </select>
+        </div>
+        <div class="col-sm-6">
+          <select class="form-select" name="jobSource">
+            <option value="" disabled selected>Job source</option>
+            <option>Some job source</option>
+          </select>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col">
+          <textarea
+            class="form-control"
+            name="jobDescription"
+            placeholder="Job description"
+            rows="4"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm-6 box">
+      <h4 class="mb-3">Client details</h4>
+      <div class="row line">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            name="address"
+            placeholder="Address"
+            value=""
+            required
+          />
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            name="city"
+            placeholder="City"
+            value=""
+            required
+          />
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            name="state"
+            placeholder="State"
+            value=""
+            required
+          />
+        </div></div>
+      <div class="row line">
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            name="zip"
+            placeholder="Zip code"
+            value=""
+          />
+        </div>
+        <div class="col-sm-6">
+          <select class="form-select" name="area">
+            <option value="" disabled selected>Area</option>
+            <option>Some area</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 box">
+      <h4 class="mb-3">Scheduled</h4>
+      <div class="row line">
+        <div class="col">
+          <input
+            type="date"
+            class="form-control"
+            name="startDate"
+            placeholder="Start date"
+            value=""
+          />
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-sm-6">
+          <input
+            type="time"
+            class="form-control"
+            name="startTime"
+            placeholder="Start time"
+            value=""
+            required
+          />
+        </div>
+        <div class="col-sm-6">
+          <input
+            type="time"
+            class="form-control"
+            name="endTime"
+            placeholder="End time"
+            value=""
+            required
+          />
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col">
+          <select class="form-select" name="testSelect" required>
+            <option value="" disabled selected>Test Select</option>
+            <option>United States</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"><div class="col">
+      <input type="hidden" value="{{company_id}}" name="company_id" />
+      <input type="hidden" value="{{selected_id}}" name="selected_id" />
+      <button
+        id="saveJob"
+        class="btn btn-success btn-lg mt-3 px-5 float-end"
+        type="button"
+      >Save</button></div></div>
+
+</form>
+
+<script src="/js/add-job.js"></script>
+<link rel="stylesheet" href="/css/style.css" />
